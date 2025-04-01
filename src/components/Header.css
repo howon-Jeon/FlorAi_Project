@@ -15,19 +15,23 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   box-sizing: border-box;
-  overflow: hidden;
-  position: relative; /* title 절대 위치 기준이 됨 */
+  position: relative; /* 타이틀 절대 위치 기준 */
 }
 
-.icon-button,
+.icon-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
 .right-icons {
   display: flex;
   align-items: center;
   gap: 25px;
-  z-index: 1; /* title 위로 안 올라오게 */
+  z-index: 1;
 }
 
-/* 타이틀을 header 안에서 정확히 정중앙에 고정 */
 .title {
   position: absolute;
   left: 50%;
@@ -36,6 +40,7 @@
   font-weight: 600;
   color: black;
   white-space: nowrap;
+  z-index: 0;
 }
 
 .icon {
@@ -44,9 +49,14 @@
   object-fit: contain;
   opacity: 0.7;
   transition: all 0.2s ease-in-out;
+  vertical-align: middle;
 }
 
 .icon:active {
   opacity: 1;
   transform: scale(1.1);
+}
+
+.logo {
+  width: 140px;
 }

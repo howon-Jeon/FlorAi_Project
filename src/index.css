@@ -26,7 +26,7 @@ body {
 
 /* 스크롤바 스타일링 */
 .app-container::-webkit-scrollbar {
-  width: 6px;
+  width: 0;
 }
 
 .app-container::-webkit-scrollbar-thumb {
