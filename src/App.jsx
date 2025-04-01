@@ -1,10 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+
+import Main from './pages/Main';
 
 function App() {
   return (
     <div className="app-container">
-      <h1>프리텐다드 글꼴</h1>
-      <p>프리텐다드</p>
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/main' element={<Main />} />
+      </Routes>
+      
     </div>
   );
 }
