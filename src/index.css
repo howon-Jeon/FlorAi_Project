@@ -3,7 +3,6 @@
   width: 500px;
   margin: 0 auto; /* 중앙 정렬 */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 앱처럼 보이게 그림자 추가 */
-  border-radius: 8px; /* 모서리 둥글게 */
   background-color: #fff;
   position: relative;
   height: 100vh; /* 화면 높이에 맞춤 */
@@ -42,6 +41,7 @@ body {
 /* 앱 내부 콘텐츠에 여백 추가 */
 .app-content {
   padding: 20px;
+  
 }
 
 @font-face{

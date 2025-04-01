@@ -1,0 +1,24 @@
+.intro-box {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffeaea;
+  padding: 30px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.intro-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  font-family: "Pretendard-Bold", sans-serif;
+}
+
+.intro-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Pretendard-Regular", sans-serif;
+}
