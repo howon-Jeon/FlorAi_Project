@@ -1,0 +1,58 @@
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  overflow: hidden;
+  
+}
+
+.banner-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  color: white;
+  font-family: "Pretendard-Bold", sans-serif;
+}
+
+.banner-text h1 {
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-button {
+  position: absolute;
+  left: 90px;
+  margin-top: 200px;
+  width: 120px;
+  height: 120px;
+  background-color: #FFDDE4;
+  color: #333;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%; /* 완전 원형으로 */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: "Pretendard-Bold", "Pretendard-Medium","Pretendard-Regular", "Pretendard-Light","Pretendard-SemiBold",sans-serif;
+}
+
+.banner-button:hover {
+  background-color: #ffcfdc;
+}

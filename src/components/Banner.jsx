@@ -1,11 +1,17 @@
-import React from 'react'
-import banner from "../assets/images/banner.svg";
+import React from "react";
+import bannerImage from "../assets/images/banner.svg"; // PNG or JPG도 가능
+import "./Banner.css";
+
 const Banner = () => {
   return (
-    <div>
-      <img src={banner} alt='banner_img'></img>
+    <div className="banner">
+      <img src={bannerImage} alt="꽃 배너" className="banner-bg" />
+      <div className="banner-text">
+        <h1>당신의 마음을<br />꽃으로 전하세요</h1>
+        <button className="banner-button">꽃 추천받기</button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
