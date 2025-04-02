@@ -1,0 +1,38 @@
+.mypage-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+.mypage-welcome {
+  background-color: #ffe5ea;
+  padding: 24px;
+  text-align: center;
+  font-size: 22px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pretendard-Bold", sans-serif;
+}
+
+.mypage-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mypage-menu li {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 30px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.mypage-menu li span {
+  font-size: 18px;
+  color: #aaa;
+}

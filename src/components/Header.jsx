@@ -16,6 +16,8 @@ const Header = () => {
         return "AIPICK";
       case "/signup":
         return "회원가입";
+      case "/mypage":
+        return "마이페이지";
       default:
         return "페이지";
     }
@@ -28,7 +30,7 @@ const Header = () => {
       </div>
       <h1 className="title">{getTitle()}  </h1>
       <div className="right-icons">
-        <Link to="#"><img src={userIcon} alt="User" className="icon user" /></Link>
+        <Link to="/mypage"><img src={userIcon} alt="User" className="icon user" /></Link>
         <Link to= "#"><img src={cartIcon} alt="Cart" className="icon cart" /></Link>
       </div>
     </header>

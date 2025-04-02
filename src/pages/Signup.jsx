@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Singup.css";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
 
   const [form, setForm] = useState({
@@ -76,6 +78,9 @@ const Signup = () => {
           />
 
           <button onClick={handleNext}>다음</button>
+          <button className="backs-button" onClick={function(){navigate("/login")}}>
+            돌아가기
+          </button>
         </>
       )}
 
@@ -108,6 +113,7 @@ const Signup = () => {
           />
 
           <button onClick={handleSubmit}>완료</button>
+          
         </>
       )}
     </div>

@@ -3,6 +3,8 @@ import logo from "../assets/icons/logo.svg";
 import cartIcon from "../assets/icons/basket.svg";
 import userIcon from "../assets/icons/profile.svg";
 import "./Header.css";
+import { Link } from 'react-router-dom';
+
 
 const MainHeader = () => {
   return (
@@ -11,7 +13,7 @@ const MainHeader = () => {
         <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="right-icons">
-        <img src={userIcon} alt="User" className="icon user" />
+        <Link to="/mypage"><img src={userIcon} alt="User" className="icon user" /></Link>
         <img src={cartIcon} alt="Cart" className="icon cart" />
       </div>
     </header>

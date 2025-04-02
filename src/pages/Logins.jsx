@@ -2,47 +2,49 @@ import React, { useState } from "react";
 import "./Login.css";
 import logo from "../assets/icons/logo-no.svg";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 const Logins = () => {
   const navigate = useNavigate();
   const [id, setId] = useState("");
   const [pwd, setPwd] = useState("");
-
+  
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://192.168.219.70:8085/Login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ id, pwd }),
-      });
+      const loginData = {
+        id: id,
+        pw: pwd,
+      };
   
-      if (!res.ok) {
-        throw new Error("로그인 실패");
-      }
+      // 보낼 데이터 콘솔에서 먼저 확인
+      console.log("보내는 로그인 데이터:", loginData);
   
-      const data = await res.json();
+      const response = await axios.post("http://192.168.219.70:8085/Login/login", loginData);
   
-      sessionStorage.setItem("userId", data.userId);   
-      sessionStorage.setItem("token", data.token);     
-      sessionStorage.setItem("userName", data.name);  
+      const { token, userId, name } = response.data;
+      console.log("서버 응답:", response.data);
+      sessionStorage.setItem("token", token);
+      sessionStorage.setItem("userId", userId);
+      sessionStorage.setItem("userName", name);
+      console.log("세션 토큰:", sessionStorage.getItem("token"));
+      console.log("세션 사용자 이름:", sessionStorage.getItem("userName"));
+      console.log("세션 사용자 ID:", sessionStorage.getItem("userId"));
   
       alert("로그인 성공!");
-      window.location.href = navigate("/"); // 또는 navigate("/mypage")
+      navigate("/");
     } catch (error) {
-      alert("아이디 또는 비밀번호가 올바르지 않습니다.");
       console.error("로그인 오류:", error);
+      alert("아이디 또는 비밀번호가 올바르지 않습니다.");
     }
   };
-
   return (
     <div className="login-container">
+      
       <img src={logo} alt="플로라이 로고" className="login-logo" />
 
       <div className="input-box">
-      <input
+        <input
           type="text"
           name="id"
           placeholder="아이디를 입력해주세요."
@@ -52,7 +54,7 @@ const Logins = () => {
       </div>
 
       <div className="input-box">
-      <input
+        <input
           type="password"
           name="pwd"
           placeholder="비밀번호를 입력해주세요."
@@ -62,12 +64,19 @@ const Logins = () => {
       </div>
 
       <div className="login-links">
-        <Link to="/Singup" style={{ textDecoration: "none", color: "#666"}}><span>회원가입</span></Link>
+        <Link to="/Singup" style={{ textDecoration: "none", color: "#666" }}>
+          <span>회원가입</span>
+        </Link>
         <span className="divider">|</span>
         <span>비밀번호 찾기</span>
       </div>
 
-      <button className="login-button" onClick={handleLogin}>로그인</button>
+      <button className="login-button" onClick={handleLogin}>
+        로그인
+      </button>
+      <button className="back-button" onClick={function(){navigate("/")}}>
+        돌아가기
+      </button>
     </div>
   );
 };

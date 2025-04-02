@@ -63,10 +63,25 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  
+  font-family: "Pretendard-Bold", sans-serif;
 }
 
 .login-button:hover {
   background-color: #f88090;
+}
+
+.back-button{
+  width: 100%;
+  padding: 14px 0;
+  background-color: #BFBFBF;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-family: "Pretendard-Bold", sans-serif;
 }
 
