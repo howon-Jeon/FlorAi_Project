@@ -13,7 +13,7 @@ const Header = () => {
   const getTitle = () => {
     switch (location.pathname) {
       case "/aipick":
-        return "AIPICK";
+        return "AI PICK";
       case "/signup":
         return "회원가입";
       case "/mypage":
