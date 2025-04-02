@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import backIcon from "../assets/icons/Arrow_back.svg"; // 뒤로가기 아이콘 파일명에 맞게 수정하세요
+import backIcon from "../assets/icons/Arrow_back.svg"; 
 import cartIcon from "../assets/icons/basket.svg";
 import userIcon from "../assets/icons/profile.svg";
 import { Link, useNavigate, useLocation } from "react-router-dom";

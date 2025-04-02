@@ -46,5 +46,14 @@ body {
 
 @font-face{
   font-family: "Pretendard-Medium";
-  src: url("./components/fonts/Pretendard-Medium.ttf") format("truetype");
+  src: url("./fonts/Pretendard-Medium.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Pretendard-Regular";
+  src: url("./fonts/Pretendard-Regular.ttf") format("truetype");
+}
+@font-face{
+  font-family: "Pretendard-Bold";
+  src: url("./fonts/Pretendard-Bold.ttf") format("truetype");
 }
