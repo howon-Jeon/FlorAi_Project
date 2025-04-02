@@ -9,6 +9,8 @@ const Logins = () => {
   const navigate = useNavigate();
   const [id, setId] = useState("");
   const [pwd, setPwd] = useState("");
+
+  
   
   const handleLogin = async () => {
     try {
@@ -39,7 +41,11 @@ const Logins = () => {
     }
   };
   return (
-    <div className="login-container">
+    <div className="login-container" onKeyDown={(e) => {
+      if (e.key === "Enter") {
+        handleLogin();
+      }
+    }}>
       
       <img src={logo} alt="플로라이 로고" className="login-logo" />
 
