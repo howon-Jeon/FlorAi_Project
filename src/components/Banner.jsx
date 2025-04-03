@@ -25,9 +25,9 @@ const Banner = () => {
                 꽃으로 전하세요
               </h1>
               <Link to="/aipick">
-                <button className="banner-button">꽃 추천받기</button>
+                <button className="banner-button">AI로 나만의<br/>꽃 찾기</button>
               </Link>
-            </div>
+            </div>  
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -40,7 +40,7 @@ const Banner = () => {
                 꽃으로 전하세요
               </h1>
               <Link to="/aipick">
-                <button className="banner-button">꽃 추천받기</button>
+                <button className="banner-button">AI로 나만의<br/>꽃 찾기</button>
               </Link>
             </div>
           </div>
