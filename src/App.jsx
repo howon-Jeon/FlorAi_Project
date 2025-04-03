@@ -7,6 +7,7 @@ import Login from './pages/Logins';
 import Signup from './pages/Signup';
 import Mypage from './pages/Mypage';
 
+
 function App() {
   return (
     <div className="app-container">
@@ -16,6 +17,7 @@ function App() {
         <Route path='/Login' element={<Login />} />
         <Route path='/Singup' element={<Signup />} />
         <Route path='/mypage' element={<Mypage />} />
+        
       </Routes>
       
     </div>
