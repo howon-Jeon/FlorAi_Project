@@ -27,7 +27,7 @@ const Aipick = () => {
     슬픔: {
       step: 4,
       label: "어떤 슬픔을 전달할까요?",
-      options: ["위로", "그리움", "애도", "화해"],
+      options: ["위로", "그리움", "이별", "화해"],
     },
     축하: {
       step: 5,
@@ -121,7 +121,7 @@ const Aipick = () => {
     if (step === 1)
       return {
         question: "누구에게 전하고 싶나요?",
-        options: ["연인", "부모", "자식", "친구", "지인"],
+        options: ["연인", "부모", "자식","가족", "친구", "지인"],
       };
     if (step === 2)
       return {
