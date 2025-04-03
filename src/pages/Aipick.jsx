@@ -4,6 +4,7 @@ import "./Aipick.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loading from "../components/Loading";
+
 const Aipick = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
@@ -26,7 +27,7 @@ const Aipick = () => {
     슬픔: {
       step: 4,
       label: "어떤 슬픔을 전달할까요?",
-      options: ["위로", "그리움", "애도", "후회"],
+      options: ["위로", "그리움", "애도", "화해"],
     },
     축하: {
       step: 5,
@@ -68,57 +69,45 @@ const Aipick = () => {
       const finalAnswers = { ...answers, 향기선호: selected };
       setAnswers(finalAnswers);
 
-      setLoading(true); // ✅ 로딩 시작
+      setLoading(true); // 로딩 시작
 
-      const payload = { query: finalAnswers };
-
-      console.log("서버에 전송할 데이터:", JSON.stringify(payload, null, 2)); // ✅ 형식 예쁘게 보기 좋게 출력
-      console.log("POST URL:", "http://192.168.219.70:8085/api/recommend");
-      console.log("Headers:", { "Content-Type": "application/json" });
+     
       
-      
+      // 객체의 값들만 배열로 추출
       const queryArray = Object.values(finalAnswers);
-      console.log("전송할 쿼리 배열:", queryArray);
-      axios
-        .post(
-          "http://192.168.219.70:8085/api/recommend",
-          { query: queryArray }, // Send as an array instead of an object
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
+      console.log("전송할 배열:", queryArray);
+
+      axios.post(
+        "http://192.168.219.70:8085/api/recommend",
+        { query: queryArray }, // 객체가 아닌 배열 형태로 전송
+        {
+          headers: {
+            "Content-Type": "application/json"
           }
-        )
+        }
+      )
         .then((res) => {
-          console.log("전송 성공!");
-          console.log("🪷 AI 추천 응답 전체:", res.data);
-        
-          // 각각 주요 필드 확인
-          console.log("📌 확장된 쿼리 (expanded_query):", res.data.expanded_query);
-          console.log("📌 감정 카테고리 (emotion_category):", res.data.emotion_category);
-          console.log("📌 추천 결과 리스트 (recommendations):");
-          res.data.recommendations.forEach((item, idx) => {
-            console.log(`  [${idx + 1}] 꽃 이름: ${item.name}`);
-            console.log(`     꽃말: ${item.flw_lang}`);
-            console.log(`     이미지 URL: ${item.flw_img}`);
-            console.log(`     추천 이유: ${item.reason}`);
-          });
           console.log("전송 성공:", res.data);
+          localStorage.setItem("flowerResults", JSON.stringify(res.data));
           navigate("/result");
         })
         .catch((err) => {
           console.log("전송 실패:", err);
+          console.log("에러 응답:", err.response?.data);
           alert("데이터 전송에 실패했습니다.");
         })
         .finally(() => {
-          setLoading(false); // ✅ 로딩 종료
+          setLoading(false); // 로딩 종료
         });
     }
   };
 
   const handlePrev = () => {
-    if (step === 9) setStep(3); // 이전 감정 단계로
-    else if ([3, 4, 5, 6, 7, 8].includes(step)) setStep(2);
+    if (step === 9) {
+      // 감정에 따라 이전 단계 결정
+      const emotionStep = emotionMap[answers.감정]?.step || 2;
+      setStep(emotionStep);
+    } else if ([3, 4, 5, 6, 7, 8].includes(step)) setStep(2);
     else if (step === 2) setStep(1);
   };
 
@@ -126,7 +115,7 @@ const Aipick = () => {
   const currentEmotion = emotionMap[answers.감정];
 
   // 향기 선택 항목 (step 9)
-  const fragranceOptions = ["강하게", "은은하게", "쿨하게"];
+  const fragranceOptions = ["현실적이고 실용적인 스타일이에요", "감성적이고 분위기를 중요하게 여겨요", "차분하고 조용한 편이에요","밝고 활발한 에너지를 가졌어요","독특하고 개성 있는 매력을 가졌어요"];
 
   const getQuestionAndOptions = () => {
     if (step === 1)
@@ -146,7 +135,7 @@ const Aipick = () => {
       };
     if (step === 9)
       return {
-        question: "당신의 마음을 향기로 표현한다면?",
+        question: "이 꽃을 받는 사람은 어떤 사람인가요?", 
         options: fragranceOptions,
       };
     return { question: "", options: [] };
@@ -166,9 +155,7 @@ const Aipick = () => {
           {options.map((item, idx) => (
             <button
               key={idx}
-              className={`emotion-button ${
-                selected === item ? "selected" : ""
-              }`}
+              className={`emotion-button ${selected === item ? "selected" : ""}`}
               onClick={() => setSelected(item)}
             >
               {item}

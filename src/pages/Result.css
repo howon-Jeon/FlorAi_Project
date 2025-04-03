@@ -1,0 +1,130 @@
+.result-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #d3d3d3;
+}
+
+.result-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #d3d3d3;
+}
+
+.flower-card {
+  background: #fff;
+  overflow: hidden;
+}
+
+.flower-image {
+  width: 100%;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.flower-info {
+  padding: 12px;
+  text-align: center;
+  height: 450px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flower-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: "Pretendard-Bold", sans-serif;
+}
+
+.flower-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.meta-label {
+  font-size: 14px;
+  color: gray;
+  font-family: "Pretendard-Regular", sans-serif;
+  margin-bottom: 2px;
+}
+
+.flower-lang {
+  font-size: 1.1rem;
+  font-family: "Pretendard-Bold", sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.flower-reason {
+  background: #f3f3f3;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  height: 170px;
+  line-height: 1.4;
+  overflow-y: auto;         /* ✅ 스크롤 가능하게 */
+  word-break: break-word;   /* ✅ 단어가 너무 길 경우 줄바꿈 */
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+/* ✅ Swiper 페이지네이션을 flower-info 내부에 맞게 */
+.swiper-pagination.custom-swiper-pagination {
+  position: static;
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #aaa;
+  opacity: 0.6;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff8a8a;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cancel-button,
+.buy-button {
+  padding: 0.6rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.buy-button {
+  background-color: #ff8a8a;
+  color: #fff;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 56px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+}

@@ -18,6 +18,8 @@ const Header = () => {
         return "회원가입";
       case "/mypage":
         return "마이페이지";
+      case "/result":
+        return "추천 결과";
       default:
         return "페이지";
     }

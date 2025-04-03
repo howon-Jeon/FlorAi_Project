@@ -12,8 +12,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  
   box-sizing: border-box;
   position: relative; /* 타이틀 절대 위치 기준 */
 }

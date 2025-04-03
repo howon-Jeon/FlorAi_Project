@@ -1,0 +1,87 @@
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import "./Result.css";
+import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
+
+const Result = () => {
+
+  const navigate = useNavigate();
+  const [recommendations, setRecommendations] = useState([]);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("flowerResults");
+    if (storedData) {
+      const parsed = JSON.parse(storedData);
+      setRecommendations(parsed.recommendations || []);
+    }
+  }, []);
+
+  const getSeason = (item) => {
+    const seasons = [];
+    if (item.spring) seasons.push("봄");
+    if (item.summer) seasons.push("여름");
+    if (item.fall) seasons.push("가을");
+    if (item.winter) seasons.push("겨울");
+    return seasons.length > 0 ? seasons.join(", ") : "정보 없음";
+  };
+
+  return (
+    <div className="result-wrapper">
+      <div className="result-container">
+        <Header />
+        <Swiper
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+          spaceBetween={50}
+          slidesPerView={1}
+        >
+          {recommendations.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="flower-card">
+                <img
+                  src={item.flw_img || "https://images.unsplash.com/photo-1501004318641-b39e6451bec6"}
+                  alt={item.name}
+                  className="flower-image"
+                />
+
+                <div className="flower-info">
+                  <h2 className="flower-name">{item.name}</h2>
+
+                  <div className="flower-meta">
+                    <div>
+                      <div className="meta-label">향기</div>
+                      <strong>{item.flwSml || "무향"}</strong>
+                    </div>
+                    <div>
+                      <div className="meta-label">계절</div>
+                      <strong>{getSeason(item)}</strong>
+                    </div>
+                    <div>
+                      <div className="meta-label">알러지</div>
+                      <strong>{item.allergy === "O" ? "O" : "X"}</strong>
+                    </div>
+                  </div>
+
+                  <div className="flower-lang">{item.flwLang}</div>
+
+                  <div className="flower-reason">{item.reason}</div>
+
+                  <div className="button-group">
+                    <button className="cancel-button" onClick={function(){navigate("/")}} >취소</button>
+                    <button className="buy-button">구매하기</button>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
+  );
+};
+
+export default Result;
