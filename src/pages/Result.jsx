@@ -43,7 +43,7 @@ const Result = () => {
             <SwiperSlide key={index}>
               <div className="flower-card">
                 <img
-                  src={item.flw_img || "https://images.unsplash.com/photo-1501004318641-b39e6451bec6"}
+                  src={"/assets/images/flowershop/" + item.image}
                   alt={item.name}
                   className="flower-image"
                 />

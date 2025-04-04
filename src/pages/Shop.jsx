@@ -18,6 +18,14 @@ const situationToCategoryMap = {
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('ALL');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleScrollToTop = () => {
+    const container = document.querySelector(".app-container");
+    if (container) {
+      container.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -33,29 +41,57 @@ const Shop = () => {
     fetchProducts();
   }, []);
 
-  const filteredProducts = selectedCategory === 'ALL'
-    ? products
-    : products.filter(product =>
-        situationToCategoryMap[product.situation] === selectedCategory
-      );
+  // ✅ 카테고리 + 검색 통합 필터
+  const filteredProducts = products.filter(product => {
+    const matchesCategory =
+      selectedCategory === 'ALL' ||
+      situationToCategoryMap[product.situation] === selectedCategory;
+
+    const matchesSearch =
+      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.situation.toLowerCase().includes(searchQuery.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div>
       <Header />
+
       <CategoryBanner
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
 
+      {/* 검색창 */}
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="찾고 싶은 꽃을 검색해보세요"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+
+      {/* 상품 목록 */}
       <div className="product-grid">
         {filteredProducts.map((product) => (
           <div key={product.id} className="product-card">
-            <img className="product-image" src={product.image} alt={product.name} />
+            <img
+              className="product-image"
+              src={"/assets/images/flowershop/" + product.image}
+              alt={product.name}
+            />
             <div className="product-name">{product.name}</div>
             <div className="product-price">{product.price.toLocaleString()}원</div>
           </div>
         ))}
       </div>
+
+      {/* 항상 보이는 위로가기 버튼 */}
+      <button className="scroll-to-top" onClick={handleScrollToTop}>
+        ↑
+      </button>
 
       <Navbar />
     </div>
