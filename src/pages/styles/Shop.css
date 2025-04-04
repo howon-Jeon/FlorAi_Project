@@ -1,8 +1,8 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2열 */
-  gap: 16px;
-  padding: 16px;
+  gap: 22px;
+  padding: 20px;
   margin-bottom: 70px;
 }
 
@@ -21,13 +21,15 @@
 }
 
 .product-name {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 8px;
   color: #111;
+  font-family: "Pretendard-Bold", sans-serif;
 }
 
 .product-price {
   font-weight: bold;
   font-size: 14px;
   color: #000;
+  font-family: "Pretendard-Bold", sans-serif;
 }

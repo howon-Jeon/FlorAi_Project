@@ -22,6 +22,8 @@ const Header = () => {
         return "추천 결과";
       case "/shop":
         return "Shop";
+      case "/floword":
+        return "꽃말 도감";
       default:
         return "페이지";
     }

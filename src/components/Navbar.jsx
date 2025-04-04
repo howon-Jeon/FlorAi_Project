@@ -14,9 +14,9 @@ const Navbar = () => {
         <img src={homeIcon} alt="홈" className="icons" />
         <span>홈</span>
       </Link>
-      <Link to="#" className="nav-item">
+      <Link to="/floword" className="nav-item">
         <img src={bookIcon} alt="꽃 도감" className="icons" />
-        <span>꽃 도감</span>
+        <span>꽃말 도감</span>
       </Link>
       <Link to="/aipick" className="nav-item">
         <img src={aiIcon} alt="AI 추천" className="icons" />

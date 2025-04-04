@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Mypage from './pages/Mypage';
 import Result from './pages/Result';
 import Shop from './pages/Shop';
+import Floword from './pages/Floword';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/mypage' element={<Mypage />} />
         <Route path='/result' element={<Result />} />
         <Route path='/shop' element={<Shop />} />
+        <Route path='/floword' element={<Floword />} />
         
       </Routes>
       
