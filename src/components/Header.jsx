@@ -1,6 +1,6 @@
 import React from "react";
-import "./Header.css";
-import backIcon from "../assets/icons/Arrow_back.svg"; 
+import "./styles/Header.css";
+import backIcon from "../assets/icons/Arrow_back.svg";
 import cartIcon from "../assets/icons/basket.svg";
 import userIcon from "../assets/icons/profile.svg";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -20,6 +20,8 @@ const Header = () => {
         return "마이페이지";
       case "/result":
         return "추천 결과";
+      case "/shop":
+        return "Shop";
       default:
         return "페이지";
     }
@@ -30,10 +32,14 @@ const Header = () => {
       <div className="icon-button" onClick={goBack}>
         <img src={backIcon} alt="Back" className="icon back" />
       </div>
-      <h1 className="title">{getTitle()}  </h1>
+      <h1 className="title">{getTitle()} </h1>
       <div className="right-icons">
-        <Link to="/mypage"><img src={userIcon} alt="User" className="icon user" /></Link>
-        <Link to= "#"><img src={cartIcon} alt="Cart" className="icon cart" /></Link>
+        <Link to="/mypage">
+          <img src={userIcon} alt="User" className="icon user" />
+        </Link>
+        <Link to="#">
+          <img src={cartIcon} alt="Cart" className="icon cart" />
+        </Link>
       </div>
     </header>
   );

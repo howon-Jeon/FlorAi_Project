@@ -1,6 +1,6 @@
 import React from "react";
 import bannerImage1 from "../assets/images/banner.svg"; // PNG or JPG도 가능
-import "./Banner.css";
+import "./styles/Banner.css";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

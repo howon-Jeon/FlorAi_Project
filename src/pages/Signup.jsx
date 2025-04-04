@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Singup.css";
+import "./styles/Singup.css";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
@@ -15,7 +15,7 @@ const Signup = () => {
     addr: "",
     phone: "",
   });
-
+  
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };

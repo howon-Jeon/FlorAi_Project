@@ -1,5 +1,5 @@
 import React from "react";
-import "./Mypage.css";
+import "./styles/Mypage.css";
 import Header from "../components/Header"; // 재사용 헤더
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";

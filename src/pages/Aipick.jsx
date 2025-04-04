@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import "./Aipick.css";
+import "./styles/Aipick.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loading from "../components/Loading";

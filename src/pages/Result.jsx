@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import "./Result.css";
+import "./styles/Result.css";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 

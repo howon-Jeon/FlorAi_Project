@@ -2,7 +2,7 @@ import React from 'react'
 import logo from "../assets/icons/logo.svg";
 import cartIcon from "../assets/icons/basket.svg";
 import userIcon from "../assets/icons/profile.svg";
-import "./Header.css";
+import "./styles/Header.css";
 import { Link } from 'react-router-dom';
 
 

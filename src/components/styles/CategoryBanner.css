@@ -1,0 +1,62 @@
+/* 기존 스타일 유지 + Swiper에 맞춘 조정 */
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.banners {
+  width: 100%;
+  height: 240px;
+  background-image: url('../../assets/images/bloomblack.svg'); /* 실제 경로로 교체 */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.banners-text {
+  color: white;
+  font-size: 2.5rem;
+  
+  font-family: "Pretendard-Bold", sans-serif;
+}
+
+/* Swiper를 감싸는 wrapper */
+.category-swiper-wrapper {
+  width: 100%;
+  margin-top: 16px;
+  overflow-x: hidden;
+}
+
+.category-swiper {
+  padding: 8px 16px;
+}
+
+.swiper-slides {
+  width: auto !important;
+}
+
+/* 버튼 스타일 */
+.category-button {
+  padding: 8px 16px;
+  border: 1px solid #E2E2E2;
+  background-color: transparent;
+  color: #777777;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  font-family: "Pretendard-Medium", sans-serif;
+}
+
+.category-button.active {
+  background-color: black;
+  color: white;
+}

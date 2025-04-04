@@ -1,5 +1,5 @@
 import React from 'react'
-import "./IntroBox.css"
+import "./styles/IntroBox.css"
 const IntroBox = () => {
   return (
     <div className="intro-box">
