@@ -37,20 +37,20 @@
   text-align: center;
 }
 
-.flower-image {
+.flower-image-word {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 12px;
 }
 
-.flower-name {
+.flower-name-word {
   margin-top: 8px;
   font-size: 16px;
   font-family: "Pretendard-Bold", sans-serif;
 }
 
-.flower-lang {
+.flower-lang-word {
   font-size: 14px;
   color: #555;
   margin-top: 2px;

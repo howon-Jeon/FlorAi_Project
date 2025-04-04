@@ -58,10 +58,10 @@ const Floword = () => {
             <img
               src={"/assets/images/flowerword/" + flower.img}
               alt={flower.name}
-              className="flower-image"
+              className="flower-image-word"
             />
-            <div className="flower-name">{flower.name}</div>
-            <div className="flower-lang">{flower.flwLang}</div>
+            <div className="flower-name-word">{flower.name}</div>
+            <div className="flower-lang-word">{flower.flwLang}</div>
           </div>
         ))}
       </div>

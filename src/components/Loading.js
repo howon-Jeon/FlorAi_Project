@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Spinner from '../assets/images/loading.gif'; // 경로 다시 확인
-console.log("스피너 경로:", Spinner);
+
 const Loading = () => {
   return (
     <Background>
