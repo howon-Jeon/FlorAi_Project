@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import bannerImage3 from "../assets/images/윈터.png"; 
-import bannerImage2 from "../assets/images/아이유꽃.png"; 
+import bannerImage2 from "../assets/images/윈터.png"; 
+import bannerImage3 from "../assets/images/아이유꽃.png"; 
 const Banner = () => {
   return (
     <>
       <Swiper loop={true}
       autoplay={{
-        delay: 4000,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}>

@@ -190,7 +190,7 @@ const Aipick = () => {
             disabled={!selected}
             onClick={handleNext}
           >
-            다음
+            {step === 10 ? "제출" : "다음"}
           </button>
         </div>
       </div>

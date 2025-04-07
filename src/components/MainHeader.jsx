@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const MainHeader = () => {
+  const userId = sessionStorage.getItem("userId");
   return (
     <header className="header">
       <div className="icon-logo">
@@ -14,7 +15,9 @@ const MainHeader = () => {
       </div>
       <div className="right-icons">
         <Link to="/mypage"><img src={userIcon} alt="User" className="icon user" /></Link>
-        <img src={cartIcon} alt="Cart" className="icon cart" />
+        <Link to={`/basket/${userId}`}>
+          <img src={cartIcon} alt="Cart" className="icon cart" />
+        </Link>
       </div>
     </header>
   )

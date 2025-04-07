@@ -11,6 +11,7 @@ import Shop from './pages/Shop';
 import Floword from './pages/Floword';
 
 import ProductDetail from './pages/ProductDetail';
+import Basket from './pages/Basket';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/shop' element={<Shop />} />
         <Route path='/floword' element={<Floword />} />
         <Route path='/product/:id' element={<ProductDetail />} />
+        <Route path='/basket/:userId' element={<Basket />} />
         
       </Routes>
       
