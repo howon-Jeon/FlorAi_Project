@@ -3,7 +3,9 @@ import axios from 'axios';
 import Header from "../components/Header";
 import CategoryBanner from '../components/CategoryBanner';
 import Navbar from '../components/Navbar';
-import './styles/Shop.css';
+import { useNavigate } from 'react-router-dom';
+import "./styles/Shop.css"
+
 
 // situation 값 → 카테고리 매핑
 const situationToCategoryMap = {
@@ -16,6 +18,7 @@ const situationToCategoryMap = {
 };
 
 const Shop = () => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
@@ -74,16 +77,16 @@ const Shop = () => {
       </div>
 
       {/* 상품 목록 */}
-      <div className="product-grid">
+      <div className="products-grid">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="product-card">
+          <div key={product.id} className="products-card" onClick={() => navigate(`/product/${product.id}`)}>
             <img
-              className="product-image"
+              className="products-image"
               src={"/assets/images/flowershop/" + product.image}
               alt={product.name}
             />
-            <div className="product-name">{product.name}</div>
-            <div className="product-price">{product.price.toLocaleString()}원</div>
+            <div className="products-name">{product.name}</div>
+            <div className="products-price">{product.price.toLocaleString()}원</div>
           </div>
         ))}
       </div>

@@ -11,7 +11,11 @@ const Header = () => {
     navigate(-1); // 브라우저 히스토리에서 한 단계 뒤로 이동
   };
   const getTitle = () => {
-    switch (location.pathname) {
+    const path = location.pathname;
+  
+    if (path.startsWith("/product/")) return "상품 정보";
+  
+    switch (path) {
       case "/aipick":
         return "AI PICK";
       case "/signup":

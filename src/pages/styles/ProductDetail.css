@@ -1,0 +1,124 @@
+.product-detail {
+  padding: 30px;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+/* 상품 이미지 */
+.product-detail-image {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+/* 상품 이름 */
+.product-detail-name {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Pretendard-Bold";
+}
+
+/* 상품 가격 */
+.product-detail-price {
+  font-size: 18px;
+  margin-top: 6px;
+  font-family: "Pretendard-Medium";
+}
+
+/* 수량 선택 */
+.product-detail-quantity {
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Pretendard-Bold";
+}
+
+/* 수량 조절 버튼 + 숫자 */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  flex-direction: row; /* ✅ 가로 정렬 명시 */
+}
+
+.quantity-controls button {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-controls button:hover {
+  background-color: #f2f2f2;
+}
+
+.quantity-controls img {
+  width: 30px;
+  height: 30px;
+}
+
+/* 구매/장바구니 버튼 */
+.product-detail-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 34px 0;
+}
+
+.buy-btn {
+  flex: 1;
+  background-color: #ff9ca3;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 12px;
+  font-family: "Pretendard-Bold";
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cart-btn {
+  flex: 1;
+  background-color: #888;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 12px;
+  font-family: "Pretendard-Bold";
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* 상세정보 */
+.product-detail-info {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line;
+  margin-bottom: 70px;
+  font-family: "Pretendard-Medium";
+  line-height: 300%;
+}
+
+.product-detail-info strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-family: "Pretendard-SemiBold";
+  border-bottom: #888 solid 2px;
+}
+
+.product-detail-info p{
+  margin: 0px;
+  font-family: "Pretendard-Medium";
+}

@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import bannerImage2 from "../assets/images/아이유 꽃.png"; 
+import bannerImage3 from "../assets/images/윈터.png"; 
+import bannerImage2 from "../assets/images/아이유꽃.png"; 
 const Banner = () => {
   return (
     <>
@@ -33,6 +34,21 @@ const Banner = () => {
         <SwiperSlide>
           <div className="banner">
             <img src={bannerImage2} alt="꽃 배너" className="banner-bg" />
+            <div className="banner-text">
+              <h1>
+                당신의 마음을
+                <br />
+                꽃으로 전하세요
+              </h1>
+              <Link to="/aipick">
+                <button className="banner-button">AI로 나만의<br/>꽃 찾기</button>
+              </Link>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="banner">
+            <img src={bannerImage3} alt="꽃 배너" className="banner-bg" />
             <div className="banner-text">
               <h1>
                 당신의 마음을

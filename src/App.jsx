@@ -10,6 +10,8 @@ import Result from './pages/Result';
 import Shop from './pages/Shop';
 import Floword from './pages/Floword';
 
+import ProductDetail from './pages/ProductDetail';
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path='/result' element={<Result />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/floword' element={<Floword />} />
+        <Route path='/product/:id' element={<ProductDetail />} />
         
       </Routes>
       

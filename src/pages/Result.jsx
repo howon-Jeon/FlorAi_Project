@@ -7,6 +7,7 @@ import "./styles/Result.css";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 
+
 const Result = () => {
 
   const navigate = useNavigate();
@@ -72,7 +73,7 @@ const Result = () => {
 
                   <div className="button-group">
                     <button className="cancel-button" onClick={function(){navigate("/")}} >취소</button>
-                    <button className="buy-button">구매하기</button>
+                    <button className="buy-button" onClick={() => navigate(`/product/${item.id}`)}>구매하기</button>
                   </div>
                 </div>
               </div>
