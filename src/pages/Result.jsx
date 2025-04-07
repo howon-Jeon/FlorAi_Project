@@ -62,7 +62,7 @@ const Result = () => {
                     </div>
                     <div>
                       <div className="meta-label">알러지</div>
-                      <strong>{item.allergy === "O" ? "O" : "X"}</strong>
+                      <strong>{item.allergy === "1" ? "O" : "X"}</strong>
                     </div>
                   </div>
 
