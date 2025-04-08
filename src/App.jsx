@@ -12,6 +12,7 @@ import Floword from './pages/Floword';
 
 import ProductDetail from './pages/ProductDetail';
 import Basket from './pages/Basket';
+import OrderPage from './pages/OrderPage';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/floword' element={<Floword />} />
         <Route path='/product/:id' element={<ProductDetail />} />
         <Route path='/basket/:userId' element={<Basket />} />
+        <Route path='/order' element={<OrderPage />} />
         
       </Routes>
       

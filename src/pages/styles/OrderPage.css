@@ -1,0 +1,70 @@
+.order-container {
+  padding: 20px;
+  font-family: "Pretendard-Regular", sans-serif;
+  margin-bottom: 216px;
+}
+
+.order-item {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.order-item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.order-item-name {
+  font-family: "Pretendard-Bold", sans-serif;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.shipping-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 20px 0;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+.shipping-section h3{
+  margin: 5px 0;
+  font-family: "Pretendard-Bold", sans-serif !important;
+}
+
+.shipping-section input {
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+/* .cart-footer {
+  background-color: #eee;
+  
+  
+} */
+/* 
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.purchase-btn {
+  width: 100%;
+  background-color: #f4949c;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+} */

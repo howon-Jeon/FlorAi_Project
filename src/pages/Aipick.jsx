@@ -115,7 +115,8 @@ const Aipick = () => {
       const emotionStep = emotionMap[answers.감정]?.step || 3;
       setStep(emotionStep);
     } else if ([4, 5, 6, 7, 8, 9].includes(step)) setStep(3);
-    else if (step === 3) setStep(1);
+    else if (step === 3) setStep(2);
+    else if (step === 2) setStep(1);
   };
 
   // 감정별 세부 질문 추출
@@ -133,7 +134,7 @@ const Aipick = () => {
         if (step === 2)
           return {
             question: "전하고 싶은 사람의 성별이 어떻게 되나요?",
-            options: ["남", "여"],
+            options: ["남성", "여성"],
           };
     if (step === 3)
       return {

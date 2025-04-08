@@ -119,7 +119,7 @@ const Basket = () => {
           <span>총 상품금액</span>
           <span>{getTotalPrice().toLocaleString()} 원</span>
         </div>
-        <button className="purchase-btn">구매하기</button>
+        <button className="purchase-btn" onClick={() => navigate("/order", { state: { cartItems } })}>주문결제</button>
       </div>
       <Navbar />
     </div>
