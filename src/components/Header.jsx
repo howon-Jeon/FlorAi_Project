@@ -34,6 +34,10 @@ const Header = () => {
         return "꽃말 도감";
       case `/basket/${userId}`:
         return "장바구니";
+      case `/order`:
+        return "주문서 작성";
+      case `/order-success`:
+        return "주문 완료";
       default:
         return "페이지";
     }

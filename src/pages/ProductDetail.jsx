@@ -40,7 +40,6 @@ const ProductDetail = () => {
     }
 
     try {
-      // 장바구니 조회
       const res = await axios.get(`http://192.168.219.70:8085/Basket/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -54,7 +53,6 @@ const ProductDetail = () => {
         return;
       }
 
-      // 장바구니에 추가
       await axios.post(
         `http://192.168.219.70:8085/Basket/BasketAdd/${userId}`,
         {
@@ -75,6 +73,28 @@ const ProductDetail = () => {
       console.error("장바구니 추가 실패:", error);
       alert("장바구니 추가 중 오류가 발생했습니다.");
     }
+  };
+
+  const handleBuyNow = () => {
+    if (!token) {
+      alert("로그인이 필요합니다.");
+      navigate("/login");
+      return;
+    }
+
+    const orderItem = {
+      basketIdx: null,
+      flowerImg: product.image,
+      flowerName: product.name,
+      flowerPrice: product.price,
+      cnt: quantity,
+    };
+
+    navigate("/order", {
+      state: {
+        cartItems: [orderItem],
+      },
+    });
   };
 
   if (!product || typeof product.price !== 'number') {
@@ -107,7 +127,7 @@ const ProductDetail = () => {
         </div>
 
         <div className="product-detail-buttons">
-          <button className="buy-btn">바로 구매</button>
+          <button className="buy-btn" onClick={handleBuyNow}>바로 구매</button>
           <button className="cart-btn" onClick={handleAddToCart}>장바구니 담기</button>
         </div>
 

@@ -1,0 +1,33 @@
+.payment-success-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.payment-success-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pretendard-Regular", sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cart-image {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.payment-success-content h2 {
+  font-size: 20px;
+  font-family: "Pretendard-Bold";
+  margin-bottom: 10px;
+}
+
+.payment-success-content p {
+  color: #444;
+  font-size: 14px;
+}

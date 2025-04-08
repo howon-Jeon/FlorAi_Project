@@ -13,6 +13,7 @@ import Floword from './pages/Floword';
 import ProductDetail from './pages/ProductDetail';
 import Basket from './pages/Basket';
 import OrderPage from './pages/OrderPage';
+import OrderSucces from './pages/OrderSucces';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='/product/:id' element={<ProductDetail />} />
         <Route path='/basket/:userId' element={<Basket />} />
         <Route path='/order' element={<OrderPage />} />
+        <Route path='/order-success' element={<OrderSucces />} />
         
       </Routes>
       

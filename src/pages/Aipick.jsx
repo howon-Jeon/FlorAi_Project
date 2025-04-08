@@ -129,7 +129,7 @@ const Aipick = () => {
     if (step === 1)
       return {
         question: "누구에게 전하고 싶나요?",
-        options: ["연인", "부모", "자녀","가족", "친구", "지인"],
+        options: ["연인", "부모", "자녀","친인척", "형제", "친구", "지인"],
       };
         if (step === 2)
           return {
