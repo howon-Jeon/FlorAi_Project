@@ -40,6 +40,8 @@ const Header = () => {
         return "주문 완료";
       case `/order-history`:
         return "주문 내역";
+      case `/anniversary`:
+        return "기념일";
       default:
         return "페이지";
     }

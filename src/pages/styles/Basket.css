@@ -1,6 +1,7 @@
 .cart-container {
   padding: 30px;
   font-family: "Pretendard-Regular", sans-serif;
+  
 }
 
 .cart-item {
@@ -85,9 +86,11 @@
   bottom: 70px;
   width: 100%;
   max-width: 500px;
-  background-color: #eee;
-  padding: 30px;
+  background-color: #f9f4f3;
+  padding: 24px 30px;
   box-sizing: border-box;
+  border-top: 1px solid #e5d6d6;
+
 }
 
 .total-section {
@@ -108,6 +111,7 @@
   font-family: "Pretendard-Bold";
   font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .purchase-btn:hover {
@@ -136,4 +140,4 @@
 .qty-control .qty-icon {
   width: 30px;
   height: 30px;
-}
+} 

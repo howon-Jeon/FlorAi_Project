@@ -139,6 +139,7 @@ const ProductDetail = () => {
           <p>향기 : {product.flwSml}</p>
           <p>상황 : {product.situation}</p>
           <p>꽃말 : {product.flwLang}</p>
+          <p>색깔 : {product.color}</p>
           <p>알러지 유무 : {product.allergy === "1" ? "O" : "X"}</p>
         </div>
       </div>

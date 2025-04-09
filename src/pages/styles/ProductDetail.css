@@ -1,39 +1,43 @@
 .product-detail {
-  padding: 15px 30px;
+  padding: 24px 30px;
+  background-color: #fffaf6;
   font-family: "Pretendard-Regular", sans-serif;
 }
 
 /* 상품 이미지 */
 .product-detail-image {
   width: 100%;
-  border-radius: 10px;
+  height: 360px; /* 고정 높이로 시각 안정감 부여 */
+  border-radius: 16px;
   object-fit: cover;
-  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 /* 상품 이름 */
 .product-detail-name {
-  margin-top: 16px;
-  font-size: 20px;
-  font-weight: 600;
+  margin-top: 20px;
+  font-size: 22px;
   font-family: "Pretendard-Bold";
+  color: #222;
 }
 
 /* 상품 가격 */
 .product-detail-price {
   font-size: 18px;
   margin-top: 6px;
+  color: #555;
   font-family: "Pretendard-Medium";
 }
 
 /* 수량 선택 */
 .product-detail-quantity {
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Pretendard-Bold";
+  color: #444;
 }
 
 /* 수량 조절 버튼 + 숫자 */
@@ -74,32 +78,37 @@
   width: 30px;
   height: 30px;
 }
-
 /* 구매/장바구니 버튼 */
 .product-detail-buttons {
   display: flex;
   gap: 12px;
-  margin: 34px 0;
+  margin: 36px 0;
 }
 
 .buy-btn {
   flex: 1;
-  background-color: #ff9ca3;
+  background: linear-gradient(90deg, #f8a6c1, #f58aa3);
   color: white;
   border: none;
-  padding: 12px 0;
+  padding: 14px 0;
   border-radius: 12px;
   font-family: "Pretendard-Bold";
   font-size: 15px;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(248, 134, 165, 0.25);
+  transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: linear-gradient(90deg, #f58aa3, #f08f8f);
 }
 
 .cart-btn {
   flex: 1;
-  background-color: #888;
+  background-color: #bbb;
   color: white;
   border: none;
-  padding: 12px 0;
+  padding: 14px 0;
   border-radius: 12px;
   font-family: "Pretendard-Bold";
   font-size: 15px;
@@ -108,24 +117,24 @@
 
 /* 상세정보 */
 .product-detail-info {
-  margin-top: 12px;
-  font-size: 16px;
-  line-height: 1.6;
-  white-space: pre-line;
-  margin-bottom: 70px;
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 80px;
+  color: #444;
   font-family: "Pretendard-Medium";
-  line-height: 300%;
 }
 
 .product-detail-info strong {
   display: block;
   margin-bottom: 8px;
-  font-size: 18px;
+  font-size: 17px;
   font-family: "Pretendard-SemiBold";
-  border-bottom: #888 solid 2px;
+  border-bottom: #e5cfd0 solid 2px;
+  padding-bottom: 6px;
 }
 
-.product-detail-info p{
-  margin: 0px;
+.product-detail-info p {
+  margin: 0;
   font-family: "Pretendard-Medium";
 }

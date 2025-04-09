@@ -15,6 +15,7 @@ import Basket from './pages/Basket';
 import OrderPage from './pages/OrderPage';
 import OrderSucces from './pages/OrderSucces';
 import OrderHistory from './pages/OrderHistory';
+import AnniversaryPage from './pages/AnniversaryPage';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path='/order' element={<OrderPage />} />
         <Route path='/order-success' element={<OrderSucces />} />
         <Route path='/order-history' element={<OrderHistory />} />
+        <Route path='/anniversary' element={<AnniversaryPage />} />
         
       </Routes>
       

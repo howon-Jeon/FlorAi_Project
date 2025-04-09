@@ -9,7 +9,7 @@
 /* 배너 영역 */
 .banners {
   width: 100%;
-  height: 240px;
+  height: 200px;
   background-image: url('../../assets/images/bloomblack.svg'); /* 실제 경로로 교체 */
   background-size: cover;
   background-position: center;

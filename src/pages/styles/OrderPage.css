@@ -15,6 +15,7 @@
   height: 80px;
   border-radius: 4px;
   object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .order-item-name {
@@ -27,7 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 20px 0;
+  margin: 24px 0;
   font-family: "Pretendard-Regular", sans-serif;
 }
 
@@ -42,6 +43,12 @@
   border: 1px solid #ddd;
   border-radius: 12px;
   font-family: "Pretendard-Regular", sans-serif;
+  
+}
+
+.shipping-section input:focus {
+  border-color: #f08f8f;
+  outline: none;
 }
 
 /* .cart-footer {

@@ -52,24 +52,24 @@ const Result = () => {
                 <div className="flower-info">
                   <h2 className="flower-name">{item.name}</h2>
 
-                  <div className="flower-meta">
+                  <div className="flower-meta ">
                     <div>
-                      <div className="meta-label">향기</div>
-                      <strong>{item.flwSml || "무향"}</strong>
+                      <div className="meta-label ">향기</div>
+                      <p>{item.flwSml || "무향"}</p>
                     </div>
                     <div>
                       <div className="meta-label">계절</div>
-                      <strong>{getSeason(item)}</strong>
+                      <p>{getSeason(item)}</p>
                     </div>
                     <div>
                       <div className="meta-label">알러지</div>
-                      <strong>{item.allergy === "1" ? "O" : "X"}</strong>
+                      <p>{item.allergy === "1" ? "O" : "X"}</p>
                     </div>
                   </div>
 
-                  <div className="flower-lang">{item.flwLang}</div>
+                  <div className="flower-lang badge">{item.flwLang}</div>
 
-                  <div className="flower-reason">{item.reason}</div>
+                  <div className="flower-reason"><p>추천이유</p>{item.reason}</div>
 
                   <div className="button-group">
                     <button className="cancel-button" onClick={function(){navigate("/")}} >취소</button>
