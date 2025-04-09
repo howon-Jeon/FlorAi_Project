@@ -29,7 +29,7 @@ const Header = () => {
       case "/result":
         return "추천 결과";
       case "/shop":
-        return "Shop";
+        return "SHOP";
       case "/floword":
         return "꽃말 도감";
       case `/basket/${userId}`:

@@ -24,7 +24,7 @@ const Navbar = () => {
       </Link>
       <Link to="/shop" className="nav-item">
         <img src={shopIcon} alt="Shop" className="icons" />
-        <span className='nav-span'>Shop</span>
+        <span className='nav-span'>SHOP</span>
       </Link>
       <Link to="#" className="nav-item">
         <img src={calendarIcon} alt="기념일" className="icons" />
