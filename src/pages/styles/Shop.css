@@ -1,0 +1,36 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 22px;
+  padding: 20px;
+  margin-bottom: 70px;
+}
+
+.products-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.products-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.products-name {
+  font-size: 16px;
+  margin-top: 8px;
+  color: #111;
+  font-family: "Pretendard-Bold", sans-serif;
+}
+
+.products-price {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  font-family: "Pretendard-Bold", sans-serif;
+}

@@ -1,0 +1,28 @@
+.order-history-container {
+  padding: 20px;
+  font-family: sans-serif;
+  margin-bottom: 70px;
+}
+
+
+
+.order-box {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  border: 1px solid #ccc;
+}
+  
+.order-box p {
+  margin: 8px 0;
+  font-size: 15px;
+  font-family: "Pretendard-Medium", sans-serif;
+}
+
+.order-box strong {
+  display: inline-block;
+  width: 80px;
+  font-family: "Pretendard-Bold", sans-serif;
+}

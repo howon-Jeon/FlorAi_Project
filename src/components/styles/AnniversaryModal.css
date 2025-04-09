@@ -1,0 +1,64 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #fff9f7; /* 부드러운 배경색 */
+  padding: 28px 30px;
+  border-radius: 18px;
+  width: 320px;
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.modal-box h3 {
+  font-size: 18px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  color: #222;
+  font-family: "Pretendard-Bold", sans-serif;
+}
+
+.modal-date {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 16px;
+  font-family: "Pretendard-Medium", sans-serif;
+}
+
+.modal-desc {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  white-space: pre-wrap;
+  text-align: left;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+.modal-button {
+  background: linear-gradient(90deg, #f8a6c1, #f58aa3);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  font-family: "Pretendard-Bold", sans-serif;
+  box-shadow: 0 4px 12px rgba(248, 134, 165, 0.2);
+  transition: background 0.3s ease;
+}
+
+.modal-button:hover {
+  background: linear-gradient(90deg, #f58aa3, #f08f8f);
+}

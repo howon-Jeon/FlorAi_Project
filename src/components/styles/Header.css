@@ -1,0 +1,62 @@
+.header {
+  width: 100%;
+  max-width: 500px;
+  height: 66px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  box-sizing: border-box;
+  position: relative; /* 타이틀 절대 위치 기준 */
+}
+
+.icon-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  z-index: 1;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: black;
+  white-space: nowrap;
+  z-index: 0;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+  vertical-align: middle;
+}
+
+.icon:active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.logo {
+  width: 140px;
+}
+
