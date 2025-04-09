@@ -14,6 +14,7 @@ import ProductDetail from './pages/ProductDetail';
 import Basket from './pages/Basket';
 import OrderPage from './pages/OrderPage';
 import OrderSucces from './pages/OrderSucces';
+import OrderHistory from './pages/OrderHistory';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/basket/:userId' element={<Basket />} />
         <Route path='/order' element={<OrderPage />} />
         <Route path='/order-success' element={<OrderSucces />} />
+        <Route path='/order-history' element={<OrderHistory />} />
         
       </Routes>
       

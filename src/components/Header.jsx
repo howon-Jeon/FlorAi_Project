@@ -38,6 +38,8 @@ const Header = () => {
         return "주문서 작성";
       case `/order-success`:
         return "주문 완료";
+      case `/order-history`:
+        return "주문 내역";
       default:
         return "페이지";
     }

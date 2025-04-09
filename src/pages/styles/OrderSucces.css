@@ -22,12 +22,12 @@
 }
 
 .payment-success-content h2 {
-  font-size: 20px;
+  font-size: 26px;
   font-family: "Pretendard-Bold";
   margin-bottom: 10px;
 }
 
 .payment-success-content p {
   color: #444;
-  font-size: 14px;
+  font-size: 18px;
 }

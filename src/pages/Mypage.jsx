@@ -45,7 +45,7 @@ const Mypage = () => {
         <li>
           공지사항 <span>›</span>
         </li>
-        <li>
+        <li onClick={() => navigate(`/order-history`)}>
           주문내역 <span>›</span>
         </li>
         <li>
