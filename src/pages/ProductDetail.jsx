@@ -8,7 +8,7 @@ import Add from "../assets/icons/CircleAdd.svg";
 import Minuse from "../assets/icons/CircleMinus.svg";
 
 const ProductDetail = () => {
-  const { id } = useParams(); // URL에서 상품 id 추출
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
@@ -35,6 +35,7 @@ const ProductDetail = () => {
 
     if (!userId || !token) {
       alert("로그인이 필요합니다.");
+      sessionStorage.setItem("redirectAfterLogin", `/product/${id}`);
       navigate("/login");
       return;
     }
@@ -78,6 +79,7 @@ const ProductDetail = () => {
   const handleBuyNow = () => {
     if (!token) {
       alert("로그인이 필요합니다.");
+      sessionStorage.setItem("redirectAfterLogin", `/product/${id}`);
       navigate("/login");
       return;
     }
