@@ -20,12 +20,30 @@ const Signup = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
+
+    const { id, pw, passwordCheck } = form;
+
+    if (!id || !pw || !passwordCheck) {
+      alert("모든 항목을 입력해주세요.");
+      return;
+    } 
     if (form.pw !== form.passwordCheck) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
     }
-    setStep(2);
+     try {
+      const res = await axios.get(`http://192.168.219.70:8085/Signup/checkId?id=${id}`);
+      if (res.data.available) {
+        alert("사용 가능한 아이디입니다.");
+        setStep(2);
+      } else {
+        alert("이미 사용 중인 아이디입니다.");
+      }
+    } catch (err) {
+      console.error("중복확인 오류:", err);
+      alert("중복 확인 중 오류가 발생했습니다.");
+    }
   };
 
   const handleSubmit = async () => {

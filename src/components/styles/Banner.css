@@ -60,3 +60,24 @@
 .banner-button:hover {
   background-color: #ffcfdc;
 }
+
+
+@media screen and (max-width: 499px) {
+  .banner-text h1 {
+    font-size: 22px;
+  }
+
+  .banner-button {
+    width: 90px;
+    height: 90px;
+    font-size: 13px;
+    top: 5%;
+    right: 5%;
+  }
+  .banner-bg {
+    width: 100%;
+    height: 500px;
+    display: block;
+    object-fit: cover;
+  }
+}

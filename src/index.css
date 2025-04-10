@@ -1,13 +1,12 @@
 /* App.css 또는 index.css 파일에 추가 */
 .app-container {
   width: 500px;
-  margin: 0 auto; /* 중앙 정렬 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 앱처럼 보이게 그림자 추가 */
+  margin: 0 auto;
   background-color: #fff;
-  position: relative;
-  height: 100vh; /* 화면 높이에 맞춤 */
-  overflow-y: auto; /* 세로 스크롤 추가 */
-  overflow-x: hidden; /* 가로 스크롤 제거 */
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 전체 페이지 기본 스타일 */
@@ -56,4 +55,21 @@ body {
 @font-face{
   font-family: "Pretendard-Bold";
   src: url("./fonts/Pretendard-Bold.ttf") format("truetype");
+}
+
+
+@media screen and (max-width: 499px) {
+  .app-container {
+    width: 100vw;  /* 기기 너비에 맞춤 */
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
 }
