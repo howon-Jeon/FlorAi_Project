@@ -39,8 +39,7 @@ const Main = () => {
       )} */}
 
       <IntroBox />
-      <img src={aimethod} alt='ai' style={{ width: '500px' }}></img>
-
+      <img src={aimethod} alt='ai' style={{ width: '100%' }}></img>
       <Footer />
       <Navbar />
     </div>
