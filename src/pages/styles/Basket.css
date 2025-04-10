@@ -1,7 +1,8 @@
 .cart-container {
   padding: 30px;
   font-family: "Pretendard-Regular", sans-serif;
-  
+  min-height: 600px;
+  margin-bottom: 160px;
 }
 
 .cart-item {

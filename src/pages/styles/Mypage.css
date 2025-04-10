@@ -3,6 +3,7 @@
   max-width: 500px;
   margin: 0 auto;
   font-family: "Pretendard-Regular", sans-serif;
+  min-height: calc(100vh - 56px);
 }
 
 .mypage-welcome {

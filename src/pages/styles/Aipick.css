@@ -1,7 +1,7 @@
 .aipick-container {
   max-width: 500px;
   margin: 0 auto;
-  background: #f5f5f5;
+  background-color: #fffaf6;
   min-height: 100vh;
   font-family: "Pretendard-Regular", sans-serif;
   position: relative; /* 하단 버튼 절대 위치 기준용 */
