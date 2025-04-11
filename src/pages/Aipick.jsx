@@ -98,12 +98,12 @@ const Aipick = () => {
       };
     if (step === 2)
       return {
-        question: "누구에게 전하고 싶나요? (직접 입력해주세요)",
+        question: "누구에게 전하고 싶나요?",
         options: null,
       };
     if (step === 3)
       return {
-        question: "지금 전하고 싶은 감정은?",
+        question: "지금 전하고 싶은 감정있나요?",
         options: Object.keys(emotionMap),
       };
     if ([4, 5, 6, 7, 8, 9].includes(step))
@@ -122,7 +122,14 @@ const Aipick = () => {
   const { question, options } = getQuestionAndOptions();
 
   return (
-    <div className="aipick-container">
+    <div className="aipick-container"
+    onKeyDown={(e) => {
+      if (e.key === "Enter") {
+        handleNext();
+      }
+    }}
+    
+    >
       {loading && <Loading />}
       <Header />
       <div className="aipick-content">

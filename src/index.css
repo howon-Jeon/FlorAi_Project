@@ -10,6 +10,7 @@ html, body {
     sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
+  height: 100vh;
 }
 
 .app-container {
