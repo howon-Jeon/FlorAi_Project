@@ -1,6 +1,6 @@
 .aipick-container {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0;
   background-color: #fffaf6;
   min-height: 100vh;
   font-family: "Pretendard-Regular", sans-serif;
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
 h2 {
   font-size: 18px;

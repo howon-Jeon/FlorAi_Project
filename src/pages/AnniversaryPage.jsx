@@ -50,7 +50,7 @@ const AnniversaryPage = () => {
           >
             <h3>{item.anniversaryName}</h3>
             <p className="date">{getFormattedDate(item.month, item.day)}</p>
-            <div className="dday-box">D - {item.dday}</div>
+            <div className="dday-box">D - {item.dday === 0 ? "Day":item.dday}</div>
           </div>
         ))}
       </div>
