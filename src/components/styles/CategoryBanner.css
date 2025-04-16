@@ -45,12 +45,20 @@
 .category-swiper-wrapper {
   width: 100%;
   margin-top: 16px;
-  overflow-x: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  
 }
 
 /* Swiper 자체에 패딩 */
 .category-swiper {
   padding: 8px 16px;
+  cursor: grab;
+}
+
+
+.category-swiper:active {
+  cursor: grabbing;
 }
 
 /* 각 슬라이드 너비 자동 */
