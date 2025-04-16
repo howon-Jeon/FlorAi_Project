@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import Spinner from '../assets/images/loading.gif'; // 경로 다시 확인
+// import Spinner from '../assets/images/loading.gif'; // 경로 다시 확인
+import loadinggif from '../assets/images/giphy-unscreen.gif'; // 경로 다시 확인
 
 const Loading = () => {
   return (
     <Background>
       <LoadingText>잠시만 기다려 주세요.</LoadingText>
-      <img src={Spinner} alt="로딩중" style={{ width: "80px", height: "80px" }} />
+      {/* <img src={Spinner} alt="로딩중" style={{ width: "80px", height: "80px" }} /> */}
+      <img src={loadinggif} alt="로딩중" style={{ width: "190px", height: "190px" }} />
     </Background>
+    
   );
 };
 
@@ -30,7 +33,7 @@ export const LoadingText = styled.div`
   color: #333; 
   font-size: 1.3rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   font-family: "Pretendard-Bold", sans-serif;
 `;
 

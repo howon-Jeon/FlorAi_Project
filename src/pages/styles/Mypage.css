@@ -1,8 +1,10 @@
 .mypage-container {
   width: 100%;
   max-width: 500px;
+  
   margin: 0 auto;
   font-family: "Pretendard-Regular", sans-serif;
+  min-height: calc(100vh - 56px);
 }
 
 .mypage-welcome {
@@ -35,4 +37,13 @@
 .mypage-menu li span {
   font-size: 18px;
   color: #aaa;
+}
+
+.main_img{
+  width: 100%;
+  
+  display: block;
+  margin: 0 auto;
+  object-fit: cover; 
+  
 }

@@ -3,6 +3,7 @@ import "./styles/Mypage.css";
 import Header from "../components/Header"; // 재사용 헤더
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const Mypage = () => {
   const [userName, setUserName] = useState("");
@@ -58,6 +59,7 @@ const Mypage = () => {
           로그아웃 <span>›</span>
         </li>
       </ul>
+      <Navbar></Navbar>
     </div>
   );
 };

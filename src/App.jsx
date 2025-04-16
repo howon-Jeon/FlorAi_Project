@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/aipick' element={<Aipick />} />
-        <Route path='/Login' element={<Login />} />
+        <Route path='/Login' element={<Login />} /> 
         <Route path='/Singup' element={<Signup />} />
         <Route path='/mypage' element={<Mypage />} />
         <Route path='/result' element={<Result />} />

@@ -118,7 +118,7 @@
 /* 상세정보 */
 .product-detail-info {
   margin-top: 16px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
   margin-bottom: 80px;
   color: #444;
@@ -128,7 +128,7 @@
 .product-detail-info strong {
   display: block;
   margin-bottom: 8px;
-  font-size: 17px;
+  font-size: 18px;
   font-family: "Pretendard-SemiBold";
   border-bottom: #e5cfd0 solid 2px;
   padding-bottom: 6px;
@@ -137,4 +137,14 @@
 .product-detail-info p {
   margin: 0;
   font-family: "Pretendard-Medium";
+}
+
+
+/* 모바일 대응 */
+@media screen and (max-width: 499px) {
+  .product-detail-image {
+    
+    height: 300px; /* 고정 높이로 시각 안정감 부여 */
+    
+  }
 }

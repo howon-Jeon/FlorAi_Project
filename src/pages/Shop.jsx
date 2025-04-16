@@ -24,10 +24,7 @@ const Shop = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleScrollToTop = () => {
-    const container = document.querySelector(".app-container");
-    if (container) {
-      container.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {

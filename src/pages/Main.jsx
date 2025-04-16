@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 import Navbar from '../components/Navbar';
 import IntroBox from '../components/IntroBox';
 import Footer from '../components/Footer';
-import aimethod from '../assets/images/AI사용법.png'
+import aimethod from '../assets/images/AI사용법.svg'
 
 const Main = () => {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -39,7 +39,7 @@ const Main = () => {
       )} */}
 
       <IntroBox />
-      <img src={aimethod} alt='ai' style={{ width: '100%' }}></img>
+      <img src={aimethod} className="main_img" alt='ai' style={{ width: '100%' }}></img>
       <Footer />
       <Navbar />
     </div>

@@ -69,7 +69,7 @@ const Result = () => {
 
                   <div className="flower-lang badge">{item.flwLang}</div>
 
-                  <div className="flower-reason"><p>추천이유</p>{item.reason}</div>
+                  <div className="flower-reason"><p>추천 이유</p>{item.reason}</div>
 
                   <div className="button-group">
                     <button className="cancel-button" onClick={function(){navigate("/")}} >취소</button>
