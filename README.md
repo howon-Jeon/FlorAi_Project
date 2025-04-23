@@ -49,9 +49,6 @@
 ## ⚙ 시스템 아키텍처(구조)
 ![image](https://github.com/user-attachments/assets/43de95b0-198f-40ba-aff9-0973f5e87ee3)
 ---
-## 📌 SW유스케이스
-
----
 ## 📌 서비스 흐름도
 ![image](https://github.com/user-attachments/assets/dbb404b6-08bd-4216-88ad-62cf8815747a)
 
