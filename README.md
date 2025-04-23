@@ -65,7 +65,7 @@
 | 이름 | 역할 | GitHub |
 |------|------|--------|
 | 전호원 | 팀장, 기획, Front-end, DB 설계 및 구축 | [GitHub](https://github.com/사용자ID) |
-| 이석현 | 데이터 수집, 크롤링, AI 추천 모델링 | [GitHub](https://github.com/사용자ID) |
+| 이석현 | 데이터 수집, 크롤링, AI 추천 모델링 | [GitHub](https://github.com/lsh7897/florAI) |
 | 김성하 | Back-end 개발, DB 설계 및 구축 | [GitHub](https://github.com/julle0123/Florai) |
 
 ---
